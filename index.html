@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>My first three.js app</title>
-		<style>
-			body { margin: 0; }
-            canvas { width: 100%; height: 100% }
-		</style>
-	</head>
-	<body>
-		<script src="js/three.js"></script>
-		<script src="dist/main.js"></script>
-		<script>
-			const scene = new THREE.Scene();
-			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-			const renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			document.body.appendChild( renderer.domElement );
+<head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
 
-			const geometry = new THREE.BoxGeometry();
-			const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			const cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
+<body>
+    
+    
+    <div class="grid-container">
+        <div class="three.js">
+            <script src="js/three.js"></script>
+            <div class="grid-item-js">
+                <script src="cube.js"></script>
+            </div>
+            <div class="cursor_effect">
+                <script src="dist/main.js"></script>
+            </div>
+        </div>
+        <header class="header, grid-header" id="myHeader">
+            H E A D E R <br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla. Aliquam sem fringilla ut morbi tincidunt. 
+        </header>
+        <aside class="aside, grid-aside">
+            A S I D E <br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla. Aliquam sem fringilla ut morbi tincidunt. 
+            Aliquet nibh praesent tristique magna sit amet purus gravida. Lobortis elementum nibh tellus molestie nunc non blandit. 
+            Quisque non tellus orci ac auctor augue. Elit ut aliquam purus sit amet luctus. Massa placerat duis ultricies lacus sed turpis tincidunt id aliquet. 
+            Vestibulum lorem sed risus ultricies. Et tortor at risus viverra.
+        </aside>
+        <main class="main, grid-main">
+            M A I N <br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla. Aliquam sem fringilla ut morbi tincidunt. 
+            Aliquet nibh praesent tristique magna sit amet purus gravida. Lobortis elementum nibh tellus molestie nunc non blandit. 
+            Quisque non tellus orci ac auctor augue. Elit ut aliquam purus sit amet luctus. Massa placerat duis ultricies lacus sed turpis tincidunt id aliquet. 
+            Vestibulum lorem sed risus ultricies. Et tortor at risus viverra.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla. Aliquam sem fringilla ut morbi tincidunt. 
+            Aliquet nibh praesent tristique magna sit amet purus gravida. Lobortis elementum nibh tellus molestie nunc non blandit. 
+            Quisque non tellus orci ac auctor augue. Elit ut aliquam purus sit amet luctus. Massa placerat duis ultricies lacus sed turpis tincidunt id aliquet. 
+            Vestibulum lorem sed risus ultricies. Et tortor at risus viverra.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla. Aliquam sem fringilla ut morbi tincidunt. 
+            Aliquet nibh praesent tristique magna sit amet purus gravida. Lobortis elementum nibh tellus molestie nunc non blandit. 
+            Quisque non tellus orci ac auctor augue. Elit ut aliquam purus sit amet luctus. Massa placerat duis ultricies lacus sed turpis tincidunt id aliquet. 
+            Vestibulum lorem sed risus ultricies. Et tortor at risus viverra.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla. Aliquam sem fringilla ut morbi tincidunt. 
+            Aliquet nibh praesent tristique magna sit amet purus gravida. Lobortis elementum nibh tellus molestie nunc non blandit. 
+            Quisque non tellus orci ac auctor augue. Elit ut aliquam purus sit amet luctus. Massa placerat duis ultricies lacus sed turpis tincidunt id aliquet. 
+            Vestibulum lorem sed risus ultricies. Et tortor at risus viverra.
+        </main>
+        <footer class="footer, grid-footer">
+            F O O T E R <br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla. Aliquam sem fringilla ut morbi tincidunt. 
+        </footer>
+    </div>
+</body>
 
-			camera.position.z = 5;
-
-			const animate = function () {
-				requestAnimationFrame( animate );
-
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
-
-				renderer.render( scene, camera );
-			};
-
-			animate();
-		</script>
-	</body>
 </html>
