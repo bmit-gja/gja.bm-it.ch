@@ -77,6 +77,7 @@ main {
 .grid-header {
     grid-column: 1/ 6;
     grid-row: 1 / 1;
+    background: rgba(0, 21, 77, 0.8);
 }
 .grid-aside {
     grid-column: 1 / 1;
@@ -94,8 +95,12 @@ main {
 .grid-main {
     grid-column: 2 / 6;
     grid-row: 4 / 5;
+    background: rgba(0, 78, 131, 0.8);
+    
 }
 .grid-footer {
     grid-column: 1 / 6;
     grid-row: 6 / 6;
+    background: rgba(0, 57, 95, 0.7);
+    margin-top: 370px;
 }
