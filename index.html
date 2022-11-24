@@ -25,7 +25,7 @@
 
         const renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.getElementsByClassName(".three-js-canvas").appendChild(renderer.domElement);
+        document.body.getElementsByClassName("three-js-canvas").appendChild(renderer.domElement);
 
         const geometry = new THREE.BoxGeometry();
         const material = new THREE.MeshBasicMaterial({
@@ -48,11 +48,15 @@
         animate();
     </script>
     <div class="three-js-canvas">
+        <h2>Trying out threejs</h2>
 
     </div>
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="1000" 
-    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F22nz010DkUsKJxh84Flz4i%2FZooApp%3Fpage-id%3D0%253A1%26node-id%3D0%253A3%26viewport%3D789%252C424%252C0.61%26scaling%3Dmin-zoom%26starting-point-node-id%3D14%253A3212" allowfullscreen>
-    </iframe>
+    <div>
+        <h2>UX Design Prototype for a specific User Story</h2>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="1000" 
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F22nz010DkUsKJxh84Flz4i%2FZooApp%3Fpage-id%3D0%253A1%26node-id%3D0%253A3%26viewport%3D789%252C424%252C0.61%26scaling%3Dmin-zoom%26starting-point-node-id%3D14%253A3212" allowfullscreen>
+        </iframe>
+    </div>
 </body>
 
 </html>
