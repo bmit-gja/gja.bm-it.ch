@@ -26,7 +26,7 @@
         const renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
         //document.body.getElementsByClassName("three-js-canvas").appendChild(renderer.domElement);
-        document.body.getElementsByClassName("three-js-canvas").appendChild(renderer.domElement);
+        document.body.appendChild(renderer.domElement);
 
 
         const geometry = new THREE.BoxGeometry();
