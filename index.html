@@ -4,52 +4,69 @@
 <head>
     <meta charset="utf-8">
     <title>Portfolio</title>
+    <script src="ajax_jquery.js"></script>
+    <script src="index.js" defer></script>
 </head>
 
 <body>
-    <script src="js/three.js"></script>
-    <script src="dist/main.js"></script>
-    <script>
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, 896 / 504, 0.1, 1000);
-
-        const renderer = new THREE.WebGLRenderer();
-        //renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setSize(896, 504);
-
-        document.body.appendChild(renderer.domElement);
-        //document.body.getElementsByClassName("three-js-canvas").appendChild(renderer.domElement);
-        //document.body.appendChild(renderer.domElement);
-
-        const geometry = new THREE.BoxGeometry();
-        const material = new THREE.MeshBasicMaterial({
-            color: 0x00ff00
-        });
-        const cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
-
-        camera.position.z = 5;
-
-        const animate = function() {
-            requestAnimationFrame(animate);
-
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
-
-            renderer.render(scene, camera);
-        };
-
-        animate();
-    </script>
-    <div class="three-js-canvas" style="align-items:center">
-        <h2>Trying out threejs</h2>
-    </div>
+    <h1>Portfolio</h1>
     <div>
-        <h2>UX Design Prototype for a specific User Story</h2>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="1000" 
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F22nz010DkUsKJxh84Flz4i%2FZooApp%3Fpage-id%3D0%253A1%26node-id%3D0%253A3%26viewport%3D789%252C424%252C0.61%26scaling%3Dmin-zoom%26starting-point-node-id%3D14%253A3212" allowfullscreen>
-        </iframe>
-    </div>
+        <button id="threejs-button">Show Three.js</button>
+        <div>
+            <div id="threejs-div">
+                <script src="js/three.js"></script>
+                <script src="dist/main.js"></script>
+                <script>
+                    const scene = new THREE.Scene();
+                    const camera = new THREE.PerspectiveCamera(75, 896 / 504, 0.1, 1000);
+            
+                    const renderer = new THREE.WebGLRenderer();
+                    //renderer.setSize(window.innerWidth, window.innerHeight);
+                    renderer.setSize(896, 504);
+            
+                    // original
+                    //document.body.appendChild(renderer.domElement);
+                    // fixes
+                    //document.body.getElementsByClassName("three-js-canvas").appendChild(renderer.domElement);
+                    //document.body.appendChild(renderer.domElement);
+                    document.getElementById("threejs-div").appendChild(renderer.domElement);
+            
+                    const geometry = new THREE.BoxGeometry();
+                    const material = new THREE.MeshBasicMaterial({
+                        color: 0x00ff00
+                    });
+                    const cube = new THREE.Mesh(geometry, material);
+                    scene.add(cube);
+            
+                    camera.position.z = 5;
+            
+                    const animate = function() {
+                        requestAnimationFrame(animate);
+            
+                        cube.rotation.x += 0.01;
+                        cube.rotation.y += 0.01;
+            
+                        renderer.render(scene, camera);
+                    };
+            
+                    animate();
+                </script>
+            </div>
+        </div>
+        
+        <button id="figma-button">Show Figma Prototype</button>
+        <div id="figma-div">
+            <div class="three-js-canvas" style="align-items:center">
+                <h2>Trying out threejs</h2>
+            </div>
+            <div>
+                <h2>UX Design Prototype for a specific User Story</h2>
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="1000" 
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F22nz010DkUsKJxh84Flz4i%2FZooApp%3Fpage-id%3D0%253A1%26node-id%3D0%253A3%26viewport%3D789%252C424%252C0.61%26scaling%3Dmin-zoom%26starting-point-node-id%3D14%253A3212" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>    
 </body>
 
 </html>
