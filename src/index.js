@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from './js/three';
 import Utils from "./js/utils"; 
 import { linev, linef } from "./js/shaders/line";
 import { sparklev, sparklef } from "./js/shaders/sparkle";
@@ -269,8 +269,9 @@ function animate(now) {
             mouseMixer: mouseMixer,
         });
 
-        // // console.log(velocityOpacity.toFixed(2));
-
+        /*
+        // console.log(velocityOpacity.toFixed(2));
+        */
 
 
         let num = Math.floor((dist + 0.01) * sparklesCount);

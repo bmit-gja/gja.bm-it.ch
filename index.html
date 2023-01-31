@@ -6,6 +6,8 @@
     <title>Portfolio</title>
     <script src="ajax_jquery.js"></script>
     <script src="index.js" defer></script>
+    <script src="src/js/three.js"></script>
+    <script src="dist/main.js"></script>
 </head>
 
 <body>
@@ -14,8 +16,7 @@
         <button id="threejs-button">Show Three.js</button>
         <div>
             <div id="threejs-div">
-                <script src="js/three.js"></script>
-                <script src="dist/main.js"></script>
+                
                 <script>
                     const scene = new THREE.Scene();
                     const camera = new THREE.PerspectiveCamera(75, 896 / 504, 0.1, 1000);
