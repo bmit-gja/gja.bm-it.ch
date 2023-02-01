@@ -1,9 +1,9 @@
 import * as THREE from './js/three';
-import Utils from "./js/utils"; 
-import { linev, linef } from "./js/shaders/line";
-import { sparklev, sparklef } from "./js/shaders/sparkle";
-import { lightshaftv, lightshaftf } from "./js/shaders/lightshaft";
-import { quadclearv, quadclearf } from "./js/shaders/quadclear";
+import Utils from "./utils"; 
+import { linev, linef } from "./shaders/line";
+import { sparklev, sparklef } from "./shaders/sparkle";
+import { lightshaftv, lightshaftf } from "./shaders/lightshaft";
+import { quadclearv, quadclearf } from "./shaders/quadclear";
 
 let vec3 = function(x,y,z) {
     return new THREE.Vector3(x,y,z);

@@ -6,8 +6,6 @@ const figmaButton = document.getElementById("figma-button");
 const threejsDiv = document.getElementById("threejs-div");
 const figmaDiv = document.getElementById("figma-div");
 
-
-
 threejsButton.addEventListener("click", function() {
     $("#threejs-div").slideToggle(200);
 })

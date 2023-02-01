@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="ajax_jquery.js"></script>
-    <script src="index.js" defer></script>
-    <script src="src/js/three.js"></script>
-    <script src="dist/main.js"></script>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <script src="src/js/lib/ajax_jquery.js"></script>
+    <script src="src/js/lib/three.js"></script>
+    <script src="src/js/index.js" defer></script>
+    <script src="src/js/dist/main.js"></script>
 </head>
 
 <body>
@@ -17,7 +17,9 @@
         <button id="threejs-button">Show Three.js</button>
         <div>
             <div id="threejs-div">
-                
+                <div class="three-js-canvas" style="align-items:center">
+                    <h2>Trying out threejs</h2>
+                </div>
                 <script>
                     const scene = new THREE.Scene();
                     const camera = new THREE.PerspectiveCamera(75, 896 / 504, 0.1, 1000);
@@ -53,15 +55,13 @@
             
                     animate();
                 </script>
+
             </div>
         </div>
         
         <button id="figma-button">Show Figma Prototype</button>
-        <div id="figma-div">
-            <div class="three-js-canvas" style="align-items:center">
-                <h2>Trying out threejs</h2>
-            </div>
-            <div>
+        <div>
+            <div id="figma-div">
                 <h2>UX Design Prototype for a specific User Story</h2>
                 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="600" height="1000" 
                     src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F22nz010DkUsKJxh84Flz4i%2FZooApp%3Fpage-id%3D0%253A1%26node-id%3D0%253A3%26viewport%3D789%252C424%252C0.61%26scaling%3Dmin-zoom%26starting-point-node-id%3D14%253A3212" allowfullscreen>
